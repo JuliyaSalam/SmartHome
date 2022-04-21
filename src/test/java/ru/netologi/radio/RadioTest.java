@@ -48,7 +48,8 @@ public class RadioTest {
     @Test
     void setNextAverage() {
         Radio stat = new Radio();
-        stat.setNext(5);
+        stat.setRadioStationNumber(5);
+        stat.setNext();
         int expected = 6;
         int actual = stat.getRadioStationNumber();
 
@@ -57,7 +58,8 @@ public class RadioTest {
     @Test
     void setNextMax() {
         Radio stat = new Radio();
-        stat.setNext(9);
+        stat.setRadioStationNumber(9);
+        stat.setNext();
         int expected = 0;
         int actual = stat.getRadioStationNumber();
 
@@ -67,7 +69,8 @@ public class RadioTest {
     @Test
     void setPrivMin() {
         Radio stat = new Radio();
-        stat.setPriv(0);
+        stat.setRadioStationNumber(0);
+        stat.setPriv();
         int expected = 9;
         int actual = stat.getRadioStationNumber();
 
@@ -77,7 +80,8 @@ public class RadioTest {
     @Test
     void setPrivAverage() {
         Radio stat = new Radio();
-        stat.setPriv(5);
+        stat.setRadioStationNumber(5);
+        stat.setPriv();
         int expected = 4;
         int actual = stat.getRadioStationNumber();
 
@@ -129,7 +133,8 @@ public class RadioTest {
     @Test
     void setIncreaseVolumeApMax() {
         Radio stat = new Radio();
-        stat.setIncreaseVolumeAp(10);
+        stat.setIncreaseVolume(10);
+        stat.setIncreaseVolumeAp();
 
         int expected = 10;
         int actual = stat.getIncreaseVolume();
@@ -139,7 +144,8 @@ public class RadioTest {
     @Test
     void setIncreaseVolumeApAverage() {
         Radio stat = new Radio();
-        stat.setIncreaseVolumeAp(5);
+        stat.setIncreaseVolume(5);
+        stat.setIncreaseVolumeAp();
 
         int expected = 6;
         int actual = stat.getIncreaseVolume();
@@ -149,7 +155,8 @@ public class RadioTest {
     @Test
     void setIncreaseVolumeDownMin() {
         Radio stat = new Radio();
-        stat.setIncreaseVolumeDown(0);
+        stat.setIncreaseVolume(0);
+        stat.setIncreaseVolumeDown();
 
         int expected = 0;
         int actual = stat.getIncreaseVolume();
@@ -159,7 +166,8 @@ public class RadioTest {
     @Test
     void setIncreaseVolumeDownAverage() {
         Radio stat = new Radio();
-        stat.setIncreaseVolumeDown(5);
+        stat.setIncreaseVolume(5);
+        stat.setIncreaseVolumeDown();
 
         int expected = 4;
         int actual = stat.getIncreaseVolume();

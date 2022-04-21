@@ -31,7 +31,7 @@ public class Radio {
         this.increaseVolume = increaseVolume;
     }
 
-    public void setNext(int radioStationNumber) {
+    public void setNext() {
         if (radioStationNumber > 8) {
             this.radioStationNumber = 0;
         } else {
@@ -39,14 +39,14 @@ public class Radio {
         }
     }
 
-    public void setPriv(int radioStationNumber) {
+    public void setPriv() {
         if (radioStationNumber < 1) {
             this.radioStationNumber = 9;
         } else {
             this.radioStationNumber = radioStationNumber - 1;
         }
     }
-    public void setIncreaseVolumeAp(int increaseVolume) {
+    public void setIncreaseVolumeAp() {
         if (increaseVolume > 9) {
             this.increaseVolume = 10;
         }else {
@@ -54,7 +54,7 @@ public class Radio {
         }
     }
 
-    public void setIncreaseVolumeDown(int increaseVolume) {
+    public void setIncreaseVolumeDown() {
         if (increaseVolume < 1) {
             this.increaseVolume = 0;
         }else {
