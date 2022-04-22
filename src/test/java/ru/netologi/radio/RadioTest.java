@@ -21,32 +21,50 @@ public class RadioTest {
     public void getRadioStationNumberMaxTestMore10() {
         Radio stat = new Radio(15);
         int expected = 15;
-        int actual = stat.getRadioStationNumberMax();
+        int actual = stat.getRadioStationQuantityNumber();
 
         assertEquals(expected, actual);
     }
 
     @Test
     public void getRadioStationNumberMaxTestLess10() {
-        stat.setRadioStationNumberMax(5);
+        stat.setRadioStationQuantityNumber(5);
 
         int expected = 5;
-        int actual = stat.getRadioStationNumberMax();
+        int actual = stat.getRadioStationQuantityNumber();
 
         assertEquals(expected, actual);
     }
     @Test
     public void getRadioStationNumberMaxTestLess0() {
-        stat.setRadioStationNumberMax(-5);
+        stat.setRadioStationQuantityNumber(-5);
 
         int expected = 10;
-        int actual = stat.getRadioStationNumberMax();
+        int actual = stat.getRadioStationQuantityNumber();
+
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void getRadioStationVolumeMax() {
+        stat.setRadioStationVolumeMax(50);
+
+        int expected = 50;
+        int actual = stat.getRadioStationVolumeMax();
+
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void setRadioStationVolumeMaxlessMin() {
+        stat.setRadioStationVolumeMax(-1);
+
+        int expected = 100;
+        int actual = stat.getRadioStationVolumeMax();
 
         assertEquals(expected, actual);
     }
 
     @Test
-    void setRadioStationNumberMore10NumberMaxTestMax() {
+    void setRadioStationNumberMore10QuantityNumberTestMax() {
         Radio stat = new Radio(15);
         stat.setRadioStationNumber(15);
 
@@ -57,7 +75,7 @@ public class RadioTest {
     }
 
     @Test
-    void setRadioStationNumberLess10NumberMaxTestMax() {
+    void setRadioStationNumberLess10QuantityNumberTestMax() {
         Radio stat = new Radio(5);
         stat.setRadioStationNumber(5);
 
@@ -108,7 +126,7 @@ public class RadioTest {
         assertEquals(expected, actual);
     }
     @Test
-    void setNextMaxMore10NumberMax() {
+    void setNextMaxMore10QuantityNumber() {
         Radio stat = new Radio(15);
         stat.setRadioStationNumber(14);
         stat.setNext();
@@ -119,7 +137,7 @@ public class RadioTest {
         assertEquals(expected, actual);
     }
     @Test
-    void setNextMaxless10NumberMax() {
+    void setNextMaxless10QuantityNumber() {
         Radio stat = new Radio(5);
         stat.setRadioStationNumber(4);
         stat.setNext();
@@ -141,7 +159,7 @@ public class RadioTest {
     }
 
     @Test
-    void setPrivMinMore10NumberMax() {
+    void setPrivMinMore10QuantityNumber() {
         Radio stat = new Radio(15);
         stat.setRadioStationNumber(0);
         stat.setPriv();
@@ -152,7 +170,7 @@ public class RadioTest {
         assertEquals(expected, actual);
     }
     @Test
-    void setPrivMinless10NumberMax() {
+    void setPrivMinless10QuantityNumber() {
         Radio stat = new Radio(5);
         stat.setRadioStationNumber(0);
         stat.setPriv();

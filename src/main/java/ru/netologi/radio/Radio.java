@@ -3,13 +3,14 @@ package ru.netologi.radio;
 public class Radio {
     private int radioStationNumber;
     private int radioStationVolume;
-    private int radioStationNumberMax = 10;
+    private int radioStationQuantityNumber = 10;
+    private int radioStationVolumeMax = 100;
 
-    public Radio () {
+    public Radio() {
     }
 
-    public Radio (int radioStationNumberMax) {
-        this.radioStationNumberMax = radioStationNumberMax;
+    public Radio(int radioStationQuantityNumber) {
+        this.radioStationQuantityNumber = radioStationQuantityNumber;
     }
 
     public int getRadioStationNumber() {
@@ -20,15 +21,19 @@ public class Radio {
         return radioStationVolume;
     }
 
-    public int getRadioStationNumberMax() {
-        return radioStationNumberMax;
+    public int getRadioStationQuantityNumber() {
+        return radioStationQuantityNumber;
+    }
+
+    public int getRadioStationVolumeMax() {
+        return radioStationVolumeMax;
     }
 
     public void setRadioStationNumber(int radioStationNumber) {
         if (radioStationNumber < 0) {
             return;
         }
-        if (radioStationNumber > radioStationNumberMax-1) {
+        if (radioStationNumber > radioStationQuantityNumber - 1) {
             return;
         }
         this.radioStationNumber = radioStationNumber;
@@ -38,22 +43,29 @@ public class Radio {
         if (radioStationVolume < 0) {
             return;
         }
-        if (radioStationVolume > 100) {
+        if (radioStationVolume > radioStationVolumeMax) {
             return;
         }
         this.radioStationVolume = radioStationVolume;
     }
 
-    public void setRadioStationNumberMax(int radioStationNumberMax) {
-        if (radioStationNumberMax < 0) {
+    public void setRadioStationQuantityNumber(int radioStationQuantityNumber) {
+        if (radioStationQuantityNumber < 0) {
             return;
         }
-        this.radioStationNumberMax = radioStationNumberMax;
+        this.radioStationQuantityNumber = radioStationQuantityNumber;
     }
 
 
+    public void setRadioStationVolumeMax(int radioStationVolumeMax) {
+        if (radioStationVolumeMax < 0) {
+            return;
+        }
+        this.radioStationVolumeMax = radioStationVolumeMax;
+    }
+
     public void setNext() {
-        if (radioStationNumber > radioStationNumberMax - 2) {
+        if (radioStationNumber > radioStationQuantityNumber - 2) {
             this.radioStationNumber = 0;
         } else {
             this.radioStationNumber = radioStationNumber + 1;
@@ -62,15 +74,15 @@ public class Radio {
 
     public void setPriv() {
         if (radioStationNumber < 1) {
-            this.radioStationNumber = radioStationNumberMax - 1;
+            this.radioStationNumber = radioStationQuantityNumber - 1;
         } else {
             this.radioStationNumber = radioStationNumber - 1;
         }
     }
 
     public void setRadioStationVolumeAp() {
-        if (radioStationVolume > 98) {
-            this.radioStationVolume = 100;
+        if (radioStationVolume > radioStationVolumeMax - 2) {
+            this.radioStationVolume = radioStationVolumeMax;
         } else {
             this.radioStationVolume = radioStationVolume + 1;
         }
