@@ -38,7 +38,7 @@ public class Radio {
         if (radioStationVolume < 0) {
             return;
         }
-        if (radioStationVolume > 10) {
+        if (radioStationVolume > 100) {
             return;
         }
         this.radioStationVolume = radioStationVolume;
@@ -69,8 +69,8 @@ public class Radio {
     }
 
     public void setRadioStationVolumeAp() {
-        if (radioStationVolume > 9) {
-            this.radioStationVolume = 10;
+        if (radioStationVolume > 98) {
+            this.radioStationVolume = 100;
         } else {
             this.radioStationVolume = radioStationVolume + 1;
         }
