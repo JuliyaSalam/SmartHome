@@ -89,12 +89,12 @@ public class RadioTest {
     }
 
     @Test
-    void getIncreaseVolume() {
+    void getRadioStationVolume() {
         Radio stat = new Radio();
-        stat.setIncreaseVolume(2);
+        stat.setRadioStationVolume(2);
 
         int expected = 2;
-        int actual = stat.getIncreaseVolume();
+        int actual = stat.getRadioStationVolume();
 
         assertEquals(expected, actual);
     }
@@ -102,30 +102,30 @@ public class RadioTest {
     @Test
     void setIncreaseVolumeMax() {
         Radio stat = new Radio();
-        stat.setIncreaseVolume(11);
+        stat.setRadioStationVolume(11);
 
         int expected = 0;
-        int actual = stat.getIncreaseVolume();
+        int actual = stat.getRadioStationVolume();
 
         assertEquals(expected, actual);
     }
     @Test
     void setIncreaseVolumeMin() {
         Radio stat = new Radio();
-        stat.setIncreaseVolume(-1);
+        stat.setRadioStationVolume(-1);
 
         int expected = 0;
-        int actual = stat.getIncreaseVolume();
+        int actual = stat.getRadioStationVolume();
 
         assertEquals(expected, actual);
     }
     @Test
     void setIncreaseVolumeAverage() {
         Radio stat = new Radio();
-        stat.setIncreaseVolume(5);
+        stat.setRadioStationVolume(5);
 
         int expected = 5;
-        int actual = stat.getIncreaseVolume();
+        int actual = stat.getRadioStationVolume();
 
         assertEquals(expected, actual);
     }
@@ -133,44 +133,44 @@ public class RadioTest {
     @Test
     void setIncreaseVolumeApMax() {
         Radio stat = new Radio();
-        stat.setIncreaseVolume(10);
-        stat.setIncreaseVolumeAp();
+        stat.setRadioStationVolume(10);
+        stat.setRadioStationVolumeAp();
 
         int expected = 10;
-        int actual = stat.getIncreaseVolume();
+        int actual = stat.getRadioStationVolume();
 
         assertEquals(expected, actual);
     }
     @Test
     void setIncreaseVolumeApAverage() {
         Radio stat = new Radio();
-        stat.setIncreaseVolume(5);
-        stat.setIncreaseVolumeAp();
+        stat.setRadioStationVolume(5);
+        stat.setRadioStationVolumeAp();
 
         int expected = 6;
-        int actual = stat.getIncreaseVolume();
+        int actual = stat.getRadioStationVolume();
 
         assertEquals(expected, actual);
     }
     @Test
     void setIncreaseVolumeDownMin() {
         Radio stat = new Radio();
-        stat.setIncreaseVolume(0);
-        stat.setIncreaseVolumeDown();
+        stat.setRadioStationVolume(0);
+        stat.setRadioStationVolumeDown();
 
         int expected = 0;
-        int actual = stat.getIncreaseVolume();
+        int actual = stat.getRadioStationVolume();
 
         assertEquals(expected, actual);
     }
     @Test
     void setIncreaseVolumeDownAverage() {
         Radio stat = new Radio();
-        stat.setIncreaseVolume(5);
-        stat.setIncreaseVolumeDown();
+        stat.setRadioStationVolume(5);
+        stat.setRadioStationVolumeDown();
 
         int expected = 4;
-        int actual = stat.getIncreaseVolume();
+        int actual = stat.getRadioStationVolume();
 
         assertEquals(expected, actual);
     }

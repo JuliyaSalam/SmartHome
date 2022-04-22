@@ -2,13 +2,13 @@ package ru.netologi.radio;
 
 public class Radio {
     private int radioStationNumber;
-    private int increaseVolume;
+    private int radioStationVolume;
 
     public int getRadioStationNumber() {
         return radioStationNumber;
     }
-    public int getIncreaseVolume() {
-        return increaseVolume;
+    public int getRadioStationVolume() {
+        return radioStationVolume;
     }
 
     public void setRadioStationNumber(int radioStationNumber) {
@@ -21,14 +21,14 @@ public class Radio {
         this.radioStationNumber = radioStationNumber;
     }
 
-    public void setIncreaseVolume(int increaseVolume) {
-        if (increaseVolume < 0) {
+    public void setRadioStationVolume(int radioStationVolume) {
+        if (radioStationVolume < 0) {
             return;
         }
-        if (increaseVolume > 10) {
+        if (radioStationVolume > 10) {
             return;
         }
-        this.increaseVolume = increaseVolume;
+        this.radioStationVolume = radioStationVolume;
     }
 
     public void setNext() {
@@ -46,19 +46,19 @@ public class Radio {
             this.radioStationNumber = radioStationNumber - 1;
         }
     }
-    public void setIncreaseVolumeAp() {
-        if (increaseVolume > 9) {
-            this.increaseVolume = 10;
+    public void setRadioStationVolumeAp() {
+        if (radioStationVolume > 9) {
+            this.radioStationVolume = 10;
         }else {
-            this.increaseVolume = increaseVolume + 1;
+            this.radioStationVolume = radioStationVolume + 1;
         }
     }
 
-    public void setIncreaseVolumeDown() {
-        if (increaseVolume < 1) {
-            this.increaseVolume = 0;
+    public void setRadioStationVolumeDown() {
+        if (radioStationVolume < 1) {
+            this.radioStationVolume = 0;
         }else {
-            this.increaseVolume = increaseVolume - 1;
+            this.radioStationVolume = radioStationVolume - 1;
         }
     }
 
